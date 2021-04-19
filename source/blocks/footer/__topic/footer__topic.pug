@@ -1,6 +1,0 @@
-mixin footer__topic(modifier)
-  .footer__topic&attributes(attributes)
-    if modifier.buttonText == undefined
-        - modifier.buttonText = "Let's Talk";
-    +footer__text-container(modifier)
-    +link(Object.assign({},{link:{text:modifier.buttonText},  }))(class="link_theme_button footer__link")

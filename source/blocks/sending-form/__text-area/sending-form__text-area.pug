@@ -1,4 +1,0 @@
-mixin sending-form__text-area(modifier)
-  if modifier["placeholder"] == undefined
-      - modifier["placeholder"] = "empty__placeholder";
-  textarea.sending-form__text-area(placeholder=modifier['placeholder'] rows="7")&attributes(attributes)

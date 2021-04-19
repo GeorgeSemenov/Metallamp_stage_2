@@ -1,4 +1,0 @@
-mixin cards-screen__container(modifier)
-  .cards-screen__container(class = "swiper-wrapper" )&attributes(attributes)
-    each card in modifier.cardsArr
-      +cards-screen__card-wrapper(card)(class= 'cards-screen__card swiper-slide')

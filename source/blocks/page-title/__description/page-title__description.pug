@@ -1,4 +1,0 @@
-mixin page-title__description(modifier)
-  if modifier.description == undefined
-      - modifier.description = "Empty value";
-  p.page-title__description(class="main-content-frames")&attributes(attributes)!=modifier.description

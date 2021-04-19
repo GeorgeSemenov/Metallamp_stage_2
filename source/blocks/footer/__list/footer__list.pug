@@ -1,8 +1,0 @@
-mixin footer__list(items)
-  ul.footer__list&attributes(attributes)
-    each item, index in items
-      if index == 0
-        - item={_isTitle: true, header:item}
-        +footer__item-container(item)(class="footer__item-container_theme_title")
-      else
-        +footer__item-container(item)()
