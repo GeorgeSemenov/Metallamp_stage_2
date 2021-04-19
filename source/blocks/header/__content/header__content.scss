@@ -1,0 +1,9 @@
+.header__content {
+  /*этот класс также используется в файле header_navigation.scss*/
+  flex-grow: 1;
+  overflow: hidden;
+  @include py(5px);
+  @media (max-width: $md - 1px){
+    overflow: visible;
+  }
+}

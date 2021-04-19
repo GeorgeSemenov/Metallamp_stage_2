@@ -1,0 +1,4 @@
+mixin proposal__duration(modifier)
+  if modifier.timetoread == undefined
+      - modifier.timetoread = "время не указанна";
+  p.proposal__duration()&attributes(attributes)!=modifier.timetoread

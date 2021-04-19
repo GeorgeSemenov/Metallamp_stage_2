@@ -1,0 +1,12 @@
+.header__item {
+  font-family: 'Gilroy' ,"Times" , "Serif";
+  font-size: 3rem;
+  color: $header__item--color;
+
+  @media (max-width: $md - 1px){
+    margin-bottom: 10px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

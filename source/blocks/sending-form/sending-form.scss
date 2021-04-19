@@ -1,0 +1,22 @@
+@import '__link/sending-form__link';
+@import '__text-area/sending-form__text-area';
+@import '__text-area-container/sending-form__text-area-container';
+@import '__input/sending-form__input';
+@import '__label/sending-form__label';
+@import '__input-container/sending-form__input-container';
+@import '__header/sending-form__header';
+@import '../link/link';
+.sending-form {
+  font-family: 'Gilroy' ,"Times" , "Serif";
+  color: $sending-form--color;
+  @include px(56px);
+  box-sizing: border-box;
+  background: $sending-form--BGColor;
+  box-shadow: 5px 10px 50px $sending-form--box-shadow-color;
+  border-radius: 10px;
+  padding-top: 54px;
+  padding-bottom: 56px;
+  @media (max-width: $sm - 1px){
+    @include px(15px);
+  }
+}

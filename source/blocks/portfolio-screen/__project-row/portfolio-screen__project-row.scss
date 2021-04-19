@@ -1,0 +1,9 @@
+.portfolio-screen__project-row {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $lg - 1px){
+    display: grid;
+    grid-gap: 40px;
+    justify-content: center;
+  }
+}

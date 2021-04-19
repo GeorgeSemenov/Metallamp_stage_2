@@ -1,0 +1,39 @@
+.portfolio-screen__project {
+  height: 417px;
+  width: 422px;
+  border-radius: 10px;
+  display: flex;
+  box-sizing: border-box;
+  padding-top: 3.5%;
+  padding-left: 3.5%;
+  @media (max-width: $sm - 1px){
+    width: 300px;
+  }
+
+  &.portfolio-screen__project_theme_big{
+    padding-top: 6%;
+    padding-right: 5%;
+    width: 100%;
+    justify-content: flex-end;
+    @media (max-width: $md - 1px){
+      width: 95%;
+      @include mx(auto);
+    }
+  }
+  &.portfolio-screen__project_background_smart-house{
+    background-image: url("../../img/smart-house.png");
+    background-repeat: no-repeat;
+    @media (max-width: $sm - 1px){
+      background-image: url("../../img/smart-house-mobile.png");
+      background-repeat: no-repeat;
+    }
+  }
+  &.portfolio-screen__project_background_sparklite-app{
+    background-image: url("../../img/sparklite-app.png");
+    background-repeat: no-repeat;
+  }
+  &.portfolio-screen__project_background_car-rapetition-app{
+    background-image: url("../../img/car-rapetition-app.png");
+    background-repeat: no-repeat;
+  }
+}

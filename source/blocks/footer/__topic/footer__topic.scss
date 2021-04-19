@@ -1,0 +1,11 @@
+.footer__topic {
+  @include content-frames();
+  display: flex;
+  padding-bottom: 97px;
+
+  @media (max-width: $md - 1px){
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 45px;
+  }
+}

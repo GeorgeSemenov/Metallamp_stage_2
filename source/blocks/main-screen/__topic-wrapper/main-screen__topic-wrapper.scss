@@ -1,0 +1,13 @@
+.main-screen__topic-wrapper {
+  padding-top: 7.3%;
+
+  @media (max-width: $lg - 1px){
+    padding-top: 10%;
+    text-align: center;
+  }
+
+  @media (max-width: $md - 1px){
+    padding-top: 33.3%;
+    text-align: center;
+  }
+}
