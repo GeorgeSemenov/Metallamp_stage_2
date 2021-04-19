@@ -1,0 +1,12 @@
+include __item-content/header__item-content.pug
+include __content/header__content.pug
+include __item/header__item.pug
+include __navigation/header__navigation.pug
+include __sandwich-ico-container/header__sandwich-ico-container.pug
+include __sandwich-ico/header__sandwich-ico.pug
+include ../logo/logo.pug
+mixin header(modifier)
+  header.header&attributes(attributes)
+    +logo()
+    +header__content(modifier)
+    +header__sandwich-ico-container(modifier)
