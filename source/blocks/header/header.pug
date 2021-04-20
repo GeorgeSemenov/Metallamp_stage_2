@@ -7,6 +7,18 @@ include __sandwich-ico/header__sandwich-ico.pug
 include ../logo/logo.pug
 mixin header(modifier)
   header.header&attributes(attributes)
-    +logo()
-    +header__content(modifier)
-    +header__sandwich-ico-container(modifier)
+    - modifier_isLogotypeGray = false;
+    - modifier_isContentExits = true;
+
+    if modifier == undefined
+      - modifier = {}
+    if attributes.class == undefined
+      - attributes.class = "";
+    if ( !(attributes.class.indexOf('header_theme_UI-Kit')==-1) ) 
+      - modifier_isLogotypeGray = true;
+      - modifier_isContentExits = false;
+
+    +logo(modifier)
+    if(modifier_isContentExits)
+      +header__content(modifier)
+      +header__sandwich-ico-container(modifier)

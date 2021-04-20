@@ -1,4 +1,8 @@
-include ../../img/svg/logotype.pug
+include ../../img/svg/logopicture-gray.pug
 mixin logo(modifier)
   a.logo(href="#" aria-label="FSD logotype")&attributes(attributes)
-    +logotype(modifier)
+    if (modifier.isLogotypeGray)
+      +logopicture-gray()
+    else
+      +logopicture-gray()
+      

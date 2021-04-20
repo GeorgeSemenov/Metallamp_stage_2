@@ -1,3 +1,4 @@
+@import '_theme_UI-Kit/header_theme_UI-Kit';
 @import '_theme_white/header_theme_white';
 @import '__item-content/header__item-content';
 @import '_theme_small/header_theme_small';
@@ -12,9 +13,9 @@
 .header {
   display: flex;
   align-items: flex-end;
-  padding-top: 48px;
+  padding-top: 30px;
   padding-bottom: 0;
-  padding-left: 83px;
+  padding-left: 30px;
   padding-right: 86px;
   background-color: $header--BGColor;
   position: fixed;

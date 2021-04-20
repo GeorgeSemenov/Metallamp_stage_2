@@ -1,6 +1,6 @@
 include ../../blocks/favicon/favicon.pug
-//- include ../../blocks/header/header.pug
-
+include ../../blocks/header/header.pug
+include ../../blocks/color-and-type-screen/color-and-type-screen.pug
 doctype html
 html(lang="ru")
   head
@@ -10,8 +10,46 @@ html(lang="ru")
     //-В папке build будет лежать файл фавикона, строка которая находится ниже позволит подцепить этот файл
     +favicon()
   body
-    //- +header({
-    //-   navigationAr: []
-    //- })
+    +header({
+      navigationAr: []
+    })(class="header_theme_UI-Kit")
     main
-      
+      +color-and-type-screen({
+        squaresArr: [
+          {
+            header : "Dark Shade 100%",
+            text : "#1F2041",
+          },
+          {
+            header : "Dark Shade 75%",
+            text : "#1F2041",
+            modifier : "color-and-type-screen__square_opacity_75"
+          },
+          {
+            header : "Dark Shade 50%",
+            text : "#1F2041",
+
+            modifier : "color-and-type-screen__square_opacity_50"
+          },
+          {
+            header : "Dark Shade 25%",
+            text : "#1F2041",
+            modifier : "color-and-type-screen__square_opacity_25"
+          },
+          {
+            header : "Dark Shade 5%",
+            text : "#1F2041",
+            modifier : "color-and-type-screen__square_opacity_05"
+          },
+          {
+            header : "Purple",
+            text : "#BC9CFF",
+            modifier : "color-and-type-screen__square_color_purple"
+          },
+          {
+            header : "Green",
+            text : "#6FCF97",
+            modifier : "color-and-type-screen__square_color_green"
+          },
+        ]
+      })
