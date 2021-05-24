@@ -1,0 +1,11 @@
+.text-field__input {
+  width: 100%;
+  border: 1px solid $text-field__input--BC;
+  border-radius: 4px;
+
+  &::placeholder{
+    font-size: 14px;
+    line-height: 18px;
+    color: $text-field__input--color;
+  }
+}

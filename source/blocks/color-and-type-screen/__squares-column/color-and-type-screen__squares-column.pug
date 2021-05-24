@@ -3,4 +3,4 @@ mixin color-and-type-screen__squares-column(modifier)
     - modifier["squaresArr"] = [{header: "empty__squaresArr", modifier:""}];
   .color-and-type-screen__squares-column&attributes(attributes)
     each square in modifier.squaresArr
-      +color-and-type-screen__square-container(square)(class=square.modifier)
+      +color-and-type-screen__square-container(square)

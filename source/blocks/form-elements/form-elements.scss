@@ -1,0 +1,10 @@
+@import '../text-field/text-field';
+.form-elements {
+  display: grid;
+  grid-template-columns: 320px 320px 320px;
+
+  &.form-elements_size_standard{
+    max-width: 1140px;
+    @include mx(auto);
+  }
+}

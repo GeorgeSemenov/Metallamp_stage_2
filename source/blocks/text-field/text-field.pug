@@ -1,0 +1,11 @@
+include __input/text-field__input.pug
+include __description/text-field__description.pug
+include __title/text-field__title.pug
+mixin text-field(modifier)
+  .text-field&attributes(attributes)
+    if modifier == undefined
+      - modifier = {}
+    +text-field__title(modifier)
+    if modifier["description"] != undefined
+      +text-field__description(modifier)
+    +text-field__input(modifier)

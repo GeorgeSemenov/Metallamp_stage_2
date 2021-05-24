@@ -3,5 +3,24 @@
   height: 70px;
   background: #1F2041;
   border-radius: 6px;
+  margin-right: 40px;
 
+  &.color-and-type-screen__square_opacity_75{
+    opacity: 0.75;
+  }
+  &.color-and-type-screen__square_opacity_50{
+    opacity: 0.5;
+  }
+  &.color-and-type-screen__square_opacity_25{
+    opacity: 0.25;
+  }
+  &.color-and-type-screen__square_opacity_05{
+    opacity: 0.05;
+  }
+  &.color-and-type-screen__square_color_purple{
+    background-color: $color-and-type-screen__square_color_purple--BGColor;
+  }
+  &.color-and-type-screen__square_color_green{
+    background-color: $color-and-type-screen__square_color_green--BGColor;
+  }
 }

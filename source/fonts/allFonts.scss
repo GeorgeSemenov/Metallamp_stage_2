@@ -1,14 +1,9 @@
-@import 'gilroy/stylesheet';
-@import 'galien/stylesheet';
-//font-family: 'Gilroy' ,"Times" , "Serif";
-//font-family: 'Galien' ,"Georgia" , "Serif";
+@import 'montserrat/stylesheet';
+//font-family: 'Montserrat' ,"Arial" , "Sans-serif";
 
-//Шрифт дondrina завместо galien
+//font-family: 'PT_Serif' ,"Times" , "Serif";
 
-/*Ниже приведён списко семейств, с которыми будут использоваться безопасные шрифты*/
-//font-family: 'banny' ,times , serif;
-//font-family: 'open-sans' ,Georgia , serif;
-
-/*вот как подключать шрифты*/
-// @import 'banny/banny';
-// @import 'open-sans/open-sans';
+// "Arial", sans-serif - запасной шрифт и семейство шрифтов для шрита без засечек
+// "Times", serif - запасной шрифт и семейство шрифтов для шрита с засечками
+// ссылка вникуда -
+// (href="#!")

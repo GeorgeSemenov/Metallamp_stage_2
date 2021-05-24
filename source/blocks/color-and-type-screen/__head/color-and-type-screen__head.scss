@@ -1,1 +1,6 @@
-.color-and-type-screen__head {}
+.color-and-type-screen__head {
+  color: $color-and-type-screen__head--color;
+  margin-right: 30px;
+  font-weight: 400;
+}
+

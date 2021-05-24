@@ -1,0 +1,13 @@
+@import '_size_standard/text-field_size_standard';
+@import '__input/text-field__input';
+@import '__description/text-field__description';
+@import '__title/text-field__title';
+.text-field {
+  width: 100%;
+  font-family: 'Montserrat' ,"Arial" , "Sans-serif";
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

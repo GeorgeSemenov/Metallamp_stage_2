@@ -1,2 +1,7 @@
 mixin color-and-type-screen__head(modifier)
-  .color-and-type-screen__head&attributes(attributes)
+  if modifier["tagName"] == undefined
+    - modifier["tagName"] = "empty__tagName";
+  - var tag = modifier["tagName"];
+  if modifier["tagName"] == 'Body'
+    - tag = "p";
+  #{tag}.color-and-type-screen__head&attributes(attributes)!=modifier.tagName

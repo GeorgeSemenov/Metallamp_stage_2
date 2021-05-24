@@ -11,8 +11,8 @@ include __square/color-and-type-screen__square.pug
 include __square-container/color-and-type-screen__square-container.pug
 include __squares-column/color-and-type-screen__squares-column.pug
 mixin color-and-type-screen(modifier)
-  .color-and-type-screen&attributes(attributes)
-  if modifier == undefined
-    - modifier = {};
-  +color-and-type-screen__squares-column(modifier)
-  +color-and-type-screen__heads-column(modifier)
+  section.color-and-type-screen&attributes(attributes)
+    if modifier == undefined
+      - modifier = {};
+    +color-and-type-screen__squares-column(modifier)
+    +color-and-type-screen__heads-column(modifier)
