@@ -1,5 +1,12 @@
 .text-field__description {
   text-transform: uppercase;
   color: $text-field__description--color;
-  font-size: 13px;
+  font-size: 12px;
+}
+
+.text-field_description_slight-top{
+  .text-field__description {
+    position: relative;
+    bottom: 3px;
+  }
 }

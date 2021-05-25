@@ -76,8 +76,18 @@ html(lang="ru")
           },
         ]
       })(class="color-and-type-screen_size_standard")
-      +form-elements({
-        title: 'Text Field',
-        description: 'Defaut',
-        placeholder: 'Email'
-      })(class='form-elements_size_standard')
+      +form-elements([
+        {
+          name: 'text-field',
+          title: 'Text Field',
+          description: 'Defaut',
+          placeholder: 'Email',
+          modifier: "text-field_description_slight-top"
+        },
+        {
+          name: 'text-field',
+          title: 'Text Field',
+          description: 'Hover / Focus',
+          placeholder: 'This is pretty awesome'
+        },
+      ])(class='form-elements_size_standard')
