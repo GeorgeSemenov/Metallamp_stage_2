@@ -1,0 +1,11 @@
+@import '__text/square-container__text';
+@import '__header/square-container__header';
+@import '__description/square-container__description';
+@import '__square/square-container__square';
+.square-container {
+  display: flex;
+  margin-bottom: 20px;
+  &:nth-last-child(1){
+    margin-bottom: 0;
+  }
+}

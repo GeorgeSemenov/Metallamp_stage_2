@@ -1,0 +1,15 @@
+.head-container__description {
+  color: $head-container__description--color;
+}
+
+.head-container_style_h3{
+  .head-container__description {
+    text-transform: uppercase;
+  }
+}
+.head-container_style_body{
+  .head-container__description {
+    font-weight: 400;
+    color:  $head-container__description_style_body;
+  }
+}

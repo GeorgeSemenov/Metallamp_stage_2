@@ -1,0 +1,4 @@
+mixin head-container__description(modifier)
+  if modifier["header"] == undefined
+    - modifier["header"] = "empty__header";
+  .head-container__description&attributes(attributes)!=modifier.header

@@ -1,6 +1,7 @@
-.color-and-type-screen__head {
+.head-container__head {
   color: $head-container__head--color;
   margin-right: 30px;
   font-weight: 400;
+  min-width: 28px;
+  text-align: right;
 }
-

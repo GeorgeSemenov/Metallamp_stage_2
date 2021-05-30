@@ -1,0 +1,16 @@
+@import '__options-container/dropdown__options-container';
+@import '__math-result/dropdown__math-result';
+@import '__math-operation/dropdown__math-operation';
+@import '__math-field/dropdown__math-field';
+@import '__option/dropdown__option';
+@import '../../vendor/nice-select/jquery-nice-select-1.1.0/css/nice-select.css';
+.dropdown {
+  font-family: 'Montserrat' ,"Arial" , "Sans-serif";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+}
+select.dropdown{
+  display: none;
+}

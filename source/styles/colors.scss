@@ -11,15 +11,17 @@ $black      : #1F2041;
 /* variables with sense */
 /* *********************************************************************** */
 
-$color-and-type-screen__square_color_purple--BGColor: $purple;
-$color-and-type-screen__square_color_green--BGColor : $green;
+$square-container__square--BGColor: $black;
+$square-container__square_color_purple--BGColor: $purple;
+$square-container__square_color_green--BGColor : $green;
 
 $header__sandwich-ico--BGColor: $purple;
 $header__sandwich-ico-after-before--BGColor: $green;
 
-$color-and-type-screen__head--color: $gray;
-$color-and-type-screen__head-description_style_body: $gray-darker;
-$color-and-type-screen__head-description--color: $black;
+
+$head-container__head--color: $gray;
+$head-container__description_style_body: $gray-darker;
+$head-container__description--color: $black;
 
 $text-field__title--color: $black;
 $text-field__description--color: $gray-dark;

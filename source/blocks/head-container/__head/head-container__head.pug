@@ -1,0 +1,7 @@
+mixin head-container__head(modifier)
+  if modifier["tagName"] == undefined
+    - modifier["tagName"] = "empty__tagName";
+  - var tag = modifier["tagName"];
+  if modifier["tagName"] == 'Body'
+    - tag = "p";
+  #{tag}.head-container__head&attributes(attributes)!=modifier.tagName

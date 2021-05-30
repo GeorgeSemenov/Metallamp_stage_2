@@ -1,0 +1,10 @@
+include __text/square-container__text.pug
+include __header/square-container__header.pug
+include __description/square-container__description.pug
+include __square/square-container__square.pug
+mixin square-container(modifier)
+  if modifier == undefined
+    - modifier = {};
+  .square-container&attributes(attributes)
+    +square-container__square(modifier)(class=modifier.modifier)
+    +square-container__description(modifier)

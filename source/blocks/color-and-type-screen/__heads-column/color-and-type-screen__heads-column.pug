@@ -3,4 +3,4 @@ mixin color-and-type-screen__heads-column(modifier)
     - modifier["heads"] = [{header: "empy_head", modifier:''}];
   .color-and-type-screen__heads-column&attributes(attributes)
     each head in modifier.heads
-      +color-and-type-screen__head-container(head)(class=head.modifier)
+      +head-container(head)(class=head.modifier)

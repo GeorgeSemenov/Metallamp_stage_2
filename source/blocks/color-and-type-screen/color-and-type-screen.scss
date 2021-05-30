@@ -1,15 +1,6 @@
-@import '_size_standard/color-and-type-screen_size_standard';
-@import '__head-text/color-and-type-screen__head-text';
-@import '__head-header/color-and-type-screen__head-header';
-@import '__head-description/color-and-type-screen__head-description';
-@import '__head/color-and-type-screen__head';
-@import '__head-container/color-and-type-screen__head-container';
+@import '../head-container/head-container';
+@import '../square-container/square-container';
 @import '__heads-column/color-and-type-screen__heads-column';
-@import '__square-text/color-and-type-screen__square-text';
-@import '__square-header/color-and-type-screen__square-header';
-@import '__square-description/color-and-type-screen__square-description';
-@import '__square/color-and-type-screen__square';
-@import '__square-container/color-and-type-screen__square-container';
 @import '__squares-column/color-and-type-screen__squares-column';
 .color-and-type-screen {
   font-family: 'Montserrat' ,"Arial" , "Sans-serif";
