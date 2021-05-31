@@ -1,92 +1,30 @@
 /* no sense variables */
-$dark-fader: rgba(53, 110, 173, 0.2);
+$gray: rgba(31, 32, 65, 0.25);
+$gray-dark  : rgba(31, 32, 65, 0.5);
+$gray-darker: rgba(31, 32, 65, 0.75);
 
-$gray-dark-faded: rgba(0, 0, 0, 0.6); //#666666
-$gray-dark-fader: rgba(0, 0, 0, 0.4);
-$gray-dark-fadest: #cccccc;//rgba(0, 0, 0, 0.2)
-$gray-faded: #798ca4;
-$gray: rgba(16, 112, 177, 0.2);
-$grayer: #F4F4F4;
-$transparent: transparent;
+$purple     : #BC9CFF;
+$green      : #6FCF97;
 
-$white: #fff;
-$white-faded: rgba(255,255,255, 0.4);
-
-$blue-light: #1f3f68;//rgba(31, 63, 104, 1)
-$blue: #356EAD;//rgba(53, 110, 173, 1)
-$blue-dark: #5A98D0;//rgba(90, 152, 208, 1)
-$blue-less-darker: #98C3E8;
-$blue-darker: #316099;//rgba(49, 96, 153, 1)
-$blue-darkest: #1F3F68;
+$black      : #1F2041;
 
 /* variables with sense */
 /* *********************************************************************** */
 
-$article_font-blue-light--color: $blue-light;
-$article_theme_screen-header--color: $blue-light;
-$article_theme_light--color: $white;
+$square-container__square--BGColor: $black;
+$square-container__square_color_purple--BGColor: $purple;
+$square-container__square_color_green--BGColor : $green;
 
-$header--BGColor: $transparent;
-$header_theme_white--BGColor: $white;
-$header__sandwich-ico--BGColor: $blue;
-$header__sandwich-ico-after-before--BGColor: $header__sandwich-ico--BGColor;
-$header__item--color: $blue-darker;
-$header_expanded__navigation--BGColor: $transparent;
-$header_expanded_theme_white__navigation--BGColor: $white;
+$header__sandwich-ico--BGColor: $purple;
+$header__sandwich-ico-after-before--BGColor: $green;
 
-$link--color: $white;
-$link--background-color: $blue-dark;
-$link__text--boxShadow: $dark-fader;
 
-$card--color: $blue-light;
-$card__learn-text--color: $blue-dark;
-$card--background-color: $white;
-$card--shadow-color: $gray;
-$cards-screen__header--color: $blue-darker;
+$head-container__head--color: $gray;
+$head-container__description_style_body: $gray-darker;
+$head-container__description--color: $black;
 
-$portfolio-screen__project-text-container--color: $white;
-
-$our-clients-screen--BGColor: $blue-dark;
-$our-clients-screen__client-logo-container--borderColor: $white-faded;
-$our-clients-screen__more-client-link--color: $white;
-$our-clients-screen__more-client-link-hover--BGColor: $gray;
-
-$footer--BGColor: $blue-dark;
-$footer__content--BGColor: $blue-darker;
-$footer__header--color: $white;
-$footer__text--color: $footer__header--color;
-$footer__dividing-line: $blue-dark;
-$footer__lText--color: $white;
-$footer__contact--color: $white;
-$footer__item--color: $white;
-$footer__sign--color: $white;
-
-$page-title--color: $white;
-
-$search__input--color: $blue-light;
-$search__input--BGColor: $grayer;
-$search__input-placeholder--color: $gray-faded;
-
-$proposal__header--color: $blue-light;
-$proposal__text--color: $gray-dark-faded;
-$proposal__author-name--color: $blue-light;
-$proposal__dates--color: $gray-dark-fader;
-
-$popular-screen__title--color: $blue;
-$popular-screen__see-all-link--color: $popular-screen__title--color;
-$popular-screen-after--BG: $gray-dark-fadest;
-//$popular-screen--border-bottom-color: $gray-dark-fadest;
-
-$articles-screen__title--color: $blue;
-$articles-screen__pagination-button--color: $blue ;
-$articles-screen__pagination-button-hover--color: $blue-dark ;
-$articles-screen__pagination-button-active--color: $blue-less-darker;
-
-$sending-form--BGColor: $white;
-$sending-form--box-shadow-color: $gray;
-$sending-form--color: $blue-darkest;
-$sending-form__input--border-color: $blue;
-$sending-form__textarea--border-color : $sending-form__input--border-color;
-
-$contact-us--color: $blue-darkest;
-$contact-us__contacts-list--color: $blue-light;
+$text-field__title--color: $black;
+$text-field__description--color: $gray-dark;
+$text-field__input--color: $gray-darker;
+$text-field__input-placeholder--color: $gray;
+$text-field__input--BC : $gray;

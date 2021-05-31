@@ -1,0 +1,6 @@
+include __description/head-container__description.pug
+include __head/head-container__head.pug
+mixin head-container(modifier)
+  .head-container&attributes(attributes)
+    +head-container__head(modifier)
+    +head-container__description(modifier)

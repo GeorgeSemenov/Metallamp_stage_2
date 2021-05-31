@@ -1,0 +1,4 @@
+mixin text-field__input(modifier)
+  if modifier["placeholder"] == undefined
+    - modifier["placeholder"] = "empty__placeholder";
+  input.text-field__input&attributes(attributes)(placeholder=modifier.placeholder)

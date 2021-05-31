@@ -17,7 +17,6 @@
   padding-bottom: 0;
   padding-left: 30px;
   padding-right: 86px;
-  background-color: $header--BGColor;
   position: fixed;
   top: 0;
   left: 0;
@@ -32,10 +31,4 @@
     padding-top: 20px;
   }
 
-  &.header_theme_small{
-    @include py(15px);
-  }
-  &.header_theme_white{
-    background-color: $header_theme_white--BGColor;
-  }
 }

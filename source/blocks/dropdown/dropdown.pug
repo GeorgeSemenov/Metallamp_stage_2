@@ -1,0 +1,9 @@
+include __option/dropdown__option.pug
+mixin dropdown(modifier)
+  if modifier == undefined
+    - modifier = {options: [{title: "empty options array"}]};
+  select.dropdown&attributes(attributes)
+    each option in modifier.options
+      if option["modifier"] == undefined
+        - option["modifier"] = "";
+      +dropdown__option(option)(class=option.modifier)

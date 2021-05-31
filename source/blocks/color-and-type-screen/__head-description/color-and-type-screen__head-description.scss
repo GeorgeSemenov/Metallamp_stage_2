@@ -1,1 +1,15 @@
-.color-and-type-screen__head-description {}
+.color-and-type-screen__head-description {
+  color: $color-and-type-screen__head-description--color;
+}
+
+.color-and-type-screen__head-container_style_h3{
+  .color-and-type-screen__head-description {
+    text-transform: uppercase;
+  }
+}
+.color-and-type-screen__head-container_style_body{
+  .color-and-type-screen__head-description {
+    font-weight: 400;
+    color:  $color-and-type-screen__head-description_style_body;
+  }
+}

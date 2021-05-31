@@ -6,7 +6,6 @@
   position: relative;
   transform: translateX(100%);
   opacity: 0;
-  background-color: $header_expanded__navigation--BGColor;
   @media (max-width: $md - 1px){
     position: absolute;
     transform: translateY(-100%);
@@ -18,12 +17,6 @@
     padding-bottom: 10px;
     border-radius: 0 0 10px 10px;
 
-  }
-}
-
-.header_theme_white{
-  .header__navigation{
-    background-color: $header_expanded_theme_white__navigation--BGColor;
   }
 }
 

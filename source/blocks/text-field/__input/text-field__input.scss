@@ -1,0 +1,16 @@
+.text-field__input {
+  width: 100%;
+  border: 1px solid $text-field__input--BC;
+  border-radius: 4px;
+  padding-top: 9px;
+  padding-left: 13px;
+  padding-bottom: 9px;
+  font-size: 14px;
+  line-height: 24px;
+  color: $text-field__input--color;
+
+  &::placeholder{
+    line-height: 18px;
+    color: $text-field__input-placeholder--color;
+  }
+}

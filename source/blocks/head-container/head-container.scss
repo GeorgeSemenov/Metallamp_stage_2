@@ -1,0 +1,28 @@
+@import '__description/head-container__description';
+@import '__head/head-container__head';
+.head-container {
+  display: flex;
+  margin-bottom: 51px;
+  &.head-container_style_h1{
+    font-size: 24px;
+    line-height: 29px;
+  }
+  &.head-container_style_h2{
+    font-size: 19px;
+    line-height: 23px;
+  }
+  &.head-container_style_h3{
+    // padding-left: 11px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  &.head-container_style_body{
+    margin-left: -10px;
+    margin-top: -3px;
+    font-size: 14px;
+    line-height: 24px;
+    @media (max-width: $md - 1px) {
+      margin-left: 0;
+    }
+  }
+}

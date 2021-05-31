@@ -1,2 +1,6 @@
 mixin color-and-type-screen__heads-column(modifier)
+  if modifier["heads"] == undefined
+    - modifier["heads"] = [{header: "empy_head", modifier:''}];
   .color-and-type-screen__heads-column&attributes(attributes)
+    each head in modifier.heads
+      +head-container(head)(class=head.modifier)

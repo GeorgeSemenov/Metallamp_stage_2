@@ -1,18 +1,10 @@
-include __head-text/color-and-type-screen__head-text.pug
-include __head-header/color-and-type-screen__head-header.pug
-include __head-description/color-and-type-screen__head-description.pug
-include __head/color-and-type-screen__head.pug
-include __head-container/color-and-type-screen__head-container.pug
+include ../head-container/head-container.pug
+include ../square-container/square-container.pug
 include __heads-column/color-and-type-screen__heads-column.pug
-include __square-text/color-and-type-screen__square-text.pug
-include __square-header/color-and-type-screen__square-header.pug
-include __square-description/color-and-type-screen__square-description.pug
-include __square/color-and-type-screen__square.pug
-include __square-container/color-and-type-screen__square-container.pug
 include __squares-column/color-and-type-screen__squares-column.pug
 mixin color-and-type-screen(modifier)
-  .color-and-type-screen&attributes(attributes)
-  if modifier == undefined
-    - modifier = {};
-  +color-and-type-screen__squares-column(modifier)
-  +color-and-type-screen__heads-column(modifier)
+  section.color-and-type-screen&attributes(attributes)
+    if modifier == undefined
+      - modifier = {};
+    +color-and-type-screen__squares-column(modifier)
+    +color-and-type-screen__heads-column(modifier)

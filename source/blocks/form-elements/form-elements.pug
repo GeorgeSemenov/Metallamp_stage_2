@@ -1,0 +1,10 @@
+include ../text-field/text-field.pug
+include ../dropdown/dropdown.pug
+mixin form-elements(blocks)
+  if blocks == undefined
+    - blocks = [];
+  section.form-elements&attributes(attributes)
+    each block in blocks
+      if block["modifier"] == undefined
+        - block["modifier"] = '';
+      +#{block.name}(block)(class=block.modifier)
