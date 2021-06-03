@@ -1,2 +1,6 @@
 mixin pagination__content(modifier)
+  if modifier["items"] == undefined
+    - modifier["items"] = [{}];
   .pagination__content&attributes(attributes)
+    each item in modifier.items
+      +#{item.mixinName}(item)(class=(item.modifier + ' pagination__' + item.mixinName))
