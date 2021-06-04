@@ -1,2 +1,5 @@
 mixin pagination__pages-control(modifier)
   .pagination__pages-control&attributes(attributes)
+    +pagination__arrow(modifier)(class="pagination__arrow_left")
+    +pagination__numbers-container(modifier)
+    +pagination__arrow(modifier)(class="pagination__arrow_right")
