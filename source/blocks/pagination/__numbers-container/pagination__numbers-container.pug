@@ -4,4 +4,5 @@ mixin pagination__numbers-container(modifier)
   ul.pagination__numbers-container&attributes(attributes)
     - var n = 0;
     while n < modifier.numberOfPages
+      - n++;
       +pagination__page-number(n+1)
