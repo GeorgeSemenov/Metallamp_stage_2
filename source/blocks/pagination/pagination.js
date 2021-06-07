@@ -1,9 +1,5 @@
 $(document).ready(function(){
-  // Тут записан примерный механизм копирования блоков
-  // let blocks= $('.square-container');
-  // let dubBlock = blocks[6].cloneNode(true)
-  // $( ".form-elements" ).append(dubBlock);
-  
+  let blockName = "pagination";
   //array.from принимает итерируемый объект, в котором указанна его длина, и создаёт полноценный массив
   //map преобразует, принимая(item,index) массив в другой массив, в котором будут только элементы с номеро индекса
   const data = Array.from({ length: 100 })
@@ -21,10 +17,10 @@ $(document).ready(function(){
 
   let perPage = 5;
   const state = {
-      page : 1,//Активная страница.
-      perPage,
+      page : 1,//Активная страница по умолчанию.
+      perPage, //Указывает сколько item-ов будет отображенн на стринце в __content
       totalPage: Math.ceil( data.length / perPage ),//указывает на общее количество страниц. ceil - округляет вверх. при perPage=5 данное значение будт = 20
-      maxVisibleButtons: 5//Количество видимых кнопок
+      maxVisibleButtons: 5//Количество видимых кнопок(кроме стрелок)
   };
 
   const controls = {
@@ -41,22 +37,12 @@ $(document).ready(function(){
           state.page = pageNumber;
       },
       createListeners() {
-          html.get('.first')
-              .addEventListener('click', () => { 
-                  this.goTo(1);
-                  update(); //обновляет список и кнопки, внизу будет пояснение, поймёшь. (list.update + buttons.update)
-          });
-          html.get('.last')
-              .addEventListener('click', () => { 
-                  this.goTo(state.totalPage);
-                  update(); 
-          });
-          html.get('.next')
+          $(`.${blockName}__arrow_left`)
               .addEventListener('click', () => { 
                   this.next();
                   update(); 
           });
-          html.get('.prev')
+          $(`.${blockName}__arrow_right`)
               .addEventListener('click', () => { 
                   this.prev();
                   update(); 
@@ -64,10 +50,10 @@ $(document).ready(function(){
       }
   };
   const list = {
-      create(item) {
+      create(content) {
           const li = document.createElement('li');
-          li.classList.add('item');//classList-псевдомассив всех классов элемента.
-          li.innerHTML = item;//innerHTML - выводит или устанавливает содержимое узла.
+          li.classList.add(`${blockName}__item`);//classList-псевдомассив всех классов элемента.
+          li.innerHTML = content;//innerHTML - выводит или устанавливает содержимое узла.
           html.get('.list').appendChild(li);//создаём item для списка.
       },
       update() {
