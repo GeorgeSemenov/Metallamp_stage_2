@@ -1,6 +1,7 @@
 @import '../pagination/pagination';
 @import '../text-field/text-field';
 @import '../dropdown/dropdown';
+@import '../toggle-list/toggle-list';
 .form-elements {
   display: grid;
   grid-template-rows: repeat(12,auto);

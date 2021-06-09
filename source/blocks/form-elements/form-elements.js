@@ -1,27 +1,26 @@
 import '../pagination/pagination';
 $(document).ready(function(){
   let blockName = "text-field";
-  // $(`.${blockName}__description`)
-  //   .addEventListener('click', () => {
-  //     console.log(`i'm clicked`);
-  //   })
   let paginations = $(`.${blockName}__description`);
-  //$(`.${blockName}__description`) возвращает коллекцию а не массив, 
-  //у массива нет метода forEach, поэтому приходится использовать цикл for
   let i=0;
   for(i=0; i< paginations.length ; i++ ){
-    console.log(i);
-    paginations[i].addEventListener('click', () => {
-        console.log(`this = ${$(this).attr("class")}`);
-        $(this).parent().css({'border':'10px solid red'});
-        console.log(`i'm clicked ${i}`);
-      })
-    // paginations[i].addEventListener('click', () => {console.log('ochen horosho');})
-    // paginations[i].css({'border':'10px solid red'});
+    paginations[i].addEventListener('click', function() {
+      console.log(`this = ${JSON.stringify(this)}`);
+      $(this).css({'border':'10px solid red'});
+    })
+    console.log(`header_theme_UI-Kit.lenght = ${$('.header_theme_UI-Kit').length}`);
+    $(paginations[i]).css({'border':`10px solid gren`});
   }
-  // $(`.${blockName}__description`).forEach((item,index)=>{
-  //   console.log('loh '+ index);
-  // })
-  // $(`.text-field__description`).css({'border': '5px solid red'});
-  console.log(`i'm here`)
+  clr(paginations[1]);
+  crt(paginations[1],'калгон');
 })
+
+function crt(node,content){
+  const li = document.createElement('span');
+  li.classList.add(`__item`);
+  li.innerHTML = content;
+  node.appendChild(li);
+}
+function clr(node){
+  node.innerHTML = "";
+}

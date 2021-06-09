@@ -1,3 +1,6 @@
+//Если планируешь дорабатывать pagination.js то учти
+//Что на UIKit уже есть экземпляр один, после доработок - проверь, 
+//чтобы работал нормально на UIKit
 $(document).ready(function(){
   let blockName = "pagination";
   //array.from принимает итерируемый объект, в котором указанна его длина, и создаёт полноценный массив
@@ -38,7 +41,7 @@ $(document).ready(function(){
       },
       createListeners() {
           $(`.${blockName}__arrow_left`)
-              .addEventListener('click', () => { 
+              .addEventListener('click', () => { /*Учти, что стрелочная функция не имеет своего this*/
                   this.next();
                   update(); 
           });
@@ -50,14 +53,14 @@ $(document).ready(function(){
       }
   };
   const list = {
-      create(content) {
+      create(node=$(`.${blockName}__content`),content) {
           const li = document.createElement('li');
           li.classList.add(`${blockName}__item`);//classList-псевдомассив всех классов элемента.
           li.innerHTML = content;//innerHTML - выводит или устанавливает содержимое узла.
-          html.get('.list').appendChild(li);//создаём item для списка.
+          node.appendChild(li);//создаём item для списка.
       },
-      update() {
-          html.get('.list').innerHTML = "";
+      update(node=$(`.${blockName}__content`)) {
+          node.innerHTML = "";
           let page = state.page - 1;//индекс страницу в массиве страниц (если бы он ещё был.). Надо бы переименовать данную переменную, на более подходящее название.
           let start = page * state.perPage;//Единовременно на страницу будет отображате количество item-ов от start до end
           let end = start + state.perPage;
@@ -66,28 +69,28 @@ $(document).ready(function(){
       }
   };
   const buttons = {    
-      element: html.get('.pagination .numbers'), //находим контэйнер с числами
-      create(page) {//создаёт кнопку хорошо бы внутрь класть ещё и кнопку
+      elements: $('.pagination__numbers-container'), //находим контэйнер с числами
+      create(buttonsNode, pageNumber) {//создаёт кнопку хорошо бы внутрь класть ещё и кнопку
           const button = document.createElement('li');
-          button.innerHTML = page;
-          if (state.page === page){
-              button.classList.add('active');
+          button.innerHTML = pageNumber;
+          if (state.page === pageNumber){
+              button.classList.add('pagination__page-number_active');
           }
           button.addEventListener('click', () => { 
-              controls.goTo(page);
+              controls.goTo(pageNumber);
               update(); 
           });
-          this.element.appendChild(button);
+          buttonsNode.appendChild(button);
       },
-      update() {
-          this.element.innerHTML = "";
+      update(buttonsNode) {
+          buttonsNode.innerHTML = "";
           const { maxLeft, maxRight } = this.calculateMaxVisible();
           for(let page = maxLeft; page <= maxRight; page++) {
               buttons.create(page);
           }
       },
       calculateMaxVisible() {//возвзращает крайние значения номеров страниц с учётом state.maxVisibleButtons
-          const { maxVisibleButtons } = state;
+          const { maxVisibleButtons } = state;//из объекта изымиается свойство maxVisibleButtons
           let maxLeft = (state.page - Math.floor(maxVisibleButtons / 2));//максимально левое число, в начале это 1 
           let maxRight = (state.page + Math.floor(maxVisibleButtons / 2));//максимально правое число, в начале это 5
           if (maxRight > state.totalPage) {//Если уприаемся в правый край, то maxRight = последнему элементу.

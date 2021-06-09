@@ -1,0 +1,12 @@
+include __list/toggle-list__list.pug
+include __title/toggle-list__title.pug
+include ../toggle-item/toggle-item.pug
+mixin toggle-list(modifier)
+  .toggle-list&attributes(attributes)
+    if modifier == undefined
+      - modifier = {};
+    if modifier["items"] == undefined
+      - modifier["items"] = [{text: `empty items array`}];
+    +toggle-list__title(modifier)
+    each item in modifier.items
+      +toggle-item(item)

@@ -1,0 +1,10 @@
+include __text/toggle-item__text.pug
+include __input/toggle-item__input.pug
+include __slider/toggle-item__slider.pug
+mixin toggle-item(modifier)
+  if modifier["id"] == undefined
+    - modifier["id"] = "empty__id";
+  label.toggle-item&attributes(attributes)(for= modifier.id)
+    +toggle-item__input(modifier)(id= modifier.id)
+    +toggle-item__slider(modifier)
+    +toggle-item__text(modifier)
