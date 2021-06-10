@@ -1,4 +1,5 @@
 /* no sense variables */
+$white: #ffffff;
 $gray: rgba(31, 32, 65, 0.25);
 $gray-dark  : rgba(31, 32, 65, 0.5);
 $gray-darker: rgba(31, 32, 65, 0.75);
@@ -27,3 +28,7 @@ $text-field__description--color: $gray-dark;
 $text-field__input--color: $gray-darker;
 $text-field__input-placeholder--color: $gray;
 $text-field__input--BC : $gray;
+
+$toggle-item__text--color: $gray-darker;
+$toggle-item__slider--border: $purple;
+$toggle-item__slider--BGColor: $white;

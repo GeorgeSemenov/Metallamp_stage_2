@@ -1,1 +1,5 @@
-.toggle-item__slider {}
+.toggle-item__slider {
+  border: 1px solid $toggle-item__slider--border;
+  border-radius: 10px;
+  background: $toggle-item__slider--BGColor;
+}

@@ -1,1 +1,6 @@
-.toggle-item__text {}
+.toggle-item__text {
+  font-family: 'Montserrat' ,"Arial" , "Sans-serif";
+  font-size: 14px;
+  line-height: 24px;
+  color: $toggle-item__text--color;
+}
